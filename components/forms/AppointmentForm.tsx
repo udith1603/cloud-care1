@@ -173,7 +173,7 @@ export const AppointmentForm = ({
               name="schedule"
               label="Expected appointment date"
               showTimeSelect
-              dateFormat="MM/dd/yyyy  -  h:mm aa"
+              dateFormat="dd/MM/yyyy  -  h:mm aa" // <-- Date idhr v sahi kiya
             />
 
             <div
