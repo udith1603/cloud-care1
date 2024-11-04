@@ -43,39 +43,39 @@ export const IdentificationTypes = [
 export const Doctors = [
   {
     image: "/assets/images/dr-green.png",
-    name: "Udith PU",
+    name: "Udith PU | Neurologist | Fee :- ₹ 1001",
   },
   {
     image: "/assets/images/dr-cameron.png",
-    name: "Nandhini",
+    name: "Nandhini | Dermatologist | Fee :- ₹ 1000",
   },
   {
     image: "/assets/images/dr-livingston.png",
-    name: "Siva Guti",
+    name: "Siva Guti | Oncologist | Fee :- ₹ 1000",
   },
   {
     image: "/assets/images/dr-peter.png",
-    name: "Raj Pandey",
+    name: "Raj Pandey | Psychiatrist | Fee :- ₹ 101",
   },
   {
     image: "/assets/images/dr-powell.png",
-    name: "Shivami Sapkal",
+    name: "Shivami Sapkal | Nephrologist | Fee :- ₹ 99",
   },
   {
     image: "/assets/images/dr-remirez.png",
-    name: "Sanjog Singh",
+    name: "Sanjog Singh | Pediatricians | Fee :- ₹ 1000",
   },
   {
     image: "/assets/images/dr-lee.png",
-    name: "Jasmine Lee",
+    name: "Jasmine Lee | Anesthesiology | Fee :- ₹ 1000",
   },
   {
     image: "/assets/images/dr-cruz.png",
-    name: "Alyana Cruz",
+    name: "Alyana Cruz | Hematologist | Fee :- ₹ 1000",
   },
   {
     image: "/assets/images/dr-sharma.png",
-    name: "Hardik Sharma",
+    name: "Hardik Sharma | Radiologist | Fee :- ₹ 1000",
   },
 ];
 
