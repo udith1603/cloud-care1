@@ -86,6 +86,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             withCountryCallingCode
             value={field.value as E164Number | undefined}
             onChange={field.onChange}
+            maxLength={15}
             className="input-phone"
           />
         </FormControl>
