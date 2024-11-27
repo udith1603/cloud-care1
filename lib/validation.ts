@@ -3,23 +3,29 @@ import { z } from "zod";
 export const UserFormValidation = z.object({
   name: z
     .string()
+    .regex(/^[a-zA-Z\s]+$/, "Name must only contain alphabets and spaces")
     .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be at most 50 characters"),
+    .max(20, "Name must be at most 20 characters"),
+    
+
   email: z.string().email("Invalid email address"),
   phone: z
     .string()
-    .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
+    .refine((phone) => /^\+\d{12}$/.test(phone), "Invalid phone number"),
+    
+  
 });
 
 export const PatientFormValidation = z.object({
   name: z
     .string()
+    .regex(/^[a-zA-Z\s]+$/, "Name must only contain alphabets and spaces")
     .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be at most 50 characters"),
+    .max(20, "Name must be at most 20 characters"),
   email: z.string().email("Invalid email address"),
   phone: z
     .string()
-    .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
+    .refine((phone) => /^\+\d{12}$/.test(phone), "Invalid phone number"),
   birthDate: z.coerce.date(),
   gender: z.enum(["Male", "Female", "Other"]),
   address: z
@@ -28,16 +34,18 @@ export const PatientFormValidation = z.object({
     .max(500, "Address must be at most 500 characters"),
   occupation: z
     .string()
+    .regex(/^[a-zA-Z\s]+$/, "occupation must only contain alphabets and spaces")
     .min(2, "Occupation must be at least 2 characters")
     .max(500, "Occupation must be at most 500 characters"),
   emergencyContactName: z
     .string()
+    .regex(/^[a-zA-Z\s]+$/, "Name must only contain alphabets and spaces")
     .min(2, "Contact name must be at least 2 characters")
     .max(50, "Contact name must be at most 50 characters"),
   emergencyContactNumber: z
     .string()
     .refine(
-      (emergencyContactNumber) => /^\+\d{10,15}$/.test(emergencyContactNumber),
+      (emergencyContactNumber) => /^\+\d{12}$/.test(emergencyContactNumber),
       "Invalid phone number"
     ),
   primaryPhysician: z.string().min(2, "Select at least one doctor"),
